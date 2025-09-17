@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup Example</title>
+  <script>
+    function showPopup() {
+      const popupWindow = window.open(
+        "https://ww1.exampledomain.com/lander?backfill=0&term=create+a+domain+for+website&term=register+a+url+address&term=get+a+free+domain+for+website",
+        "_blank"
+      );
+
+      if (!popupWindow) {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+        overlay.style.color = "white";
+        overlay.style.display = "flex";
+        overlay.style.justifyContent = "center";
+        overlay.style.alignItems = "center";
+        overlay.style.zIndex = 9999;
+        overlay.style.
