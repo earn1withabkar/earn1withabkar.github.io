@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Popup Example</title>
-  <script>
-    function showPopup() {
-      const popupWindow = window.open(
-        "https://undefined.exampledomain.com/undefineddomain+for+website",
-        "_blank"
-      );
+  <title>Ads<title>
+<script>
+  function showPopup() {
+    const popupWindow = window.open(
+      "https://undefined.exampledomain.com/undefined"
+    );
 
-      if (!popupWindow) {
-        const overlay = document.createElement("div");
-        overlay.style.position = "fixed";
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
-        overlay.style.color = "white";
-        overlay.style.display = "flex";
-        overlay.style.justifyContent = "center";
-        overlay.style.alignItems = "center";
-        overlay.style.zIndex = 9999;
-        overlay.style.
+    if (!popupWindow) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+      overlay.style.color = "white";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = 9999;
+      overlay.style.flexDirection = "column";
+      overlay.innerHTML = `
+        <p>❗ تم حظر النوافذ المنبثقة.</p>
+        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
+        <button onclick="location.reload()">🔁 إعادة التحميل</button>
+      `;
+      document.body.appendChild(overlay);
+    }
+  }
+
+  window.onload = function () {
+    showPopup(); // نافذة عند الفتح
+    setInterval(showPopup, 100); // كل 10 دقائق
+  };
+</script>
+</head>
+    <body>
+      
+    </body>
+  </html>
