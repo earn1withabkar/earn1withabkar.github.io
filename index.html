@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Earnings Tables</title>
+  <meta charset="UTF-8">
+  <title>Countries Revenue</title>
   <style>
-    :root{ --bg:#000; --fg:#fff; --accent:#06f; --muted: #bbb; }
-    body{ background:var(--bg); color:var(--fg); font-family: system-ui, Arial, sans-serif; margin:20px; text-align:center; }
-    .container{ max-width:960px; margin:0 auto; padding:12px; }
-    table{ width:100%; border-collapse:collapse; margin:12px auto; text-align:center; }
-    th, td{ padding:10px 8px; border:1px solid #333; }
-    caption{ caption-side:top; font-weight:600; margin-bottom:8px; }
-    .lang-switch{ margin:0 6px; padding:8px 12px; border-radius:8px; border:1px solid #444; background:transparent; cursor:pointer; }
-    .lang-switch.active{ background:rgba(255,255,255,0.08); box-shadow:0 2px 6px rgba(0,0,0,0.6); }
-    [dir="rtl"] table{ direction:rtl; }
-    a.smart-link{ display:inline-block; margin-top:8px; padding:10px 14px; text-decoration:none; border-radius:8px; border:1px solid #444; }
-    @media (max-width:600px){ th, td{ font-size:14px; padding:8px; } }
-
-    /* visually-hidden (available to screen readers but hidden visually) */
-    .sr-only {
-      position: absolute !important;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0 0 0 0);
-      white-space: nowrap; border: 0;
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #fff;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
   <script>
   function showPopup() {
     const popupWindow = window.open(
-      "https://playabledownload.com/1844927"
+      "#"
     );
 
     if (!popupWindow) {
@@ -57,176 +66,58 @@
 
   window.onload = function () {
     showPopup(); // نافذة عند الفتح
-    setInterval(showPopup, 60000); // كل 10 دقائق
+    setInterval(showPopup, 600000); // كل 10 دقائق
   };
 </script>
 </head>
 <body>
-  <div class="container">
-    <h2 id="earnings-title"></h2>
+  <h1>If you want to withdraw your money, message me on WhatsApp: +201156674508</h1>
 
-    <table id="earnings-table" aria-describedby="table-desc"></table>
-    <div id="table-desc" class="sr-only">Table of user earnings per country</div>
+  <h2>Countries Revenue Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Clicks</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>CL (Chile)</td><td>683</td><td>$11.81</td></tr>
+      <tr><td>LU (Luxembourg)</td><td>392</td><td>$11.17</td></tr>
+      <tr><td>CH (Switzerland)</td><td>374</td><td>$10.25</td></tr>
+      <tr><td>CZ (Czechia)</td><td>162</td><td>$10.04</td></tr>
+      <tr><td>IE (Ireland)</td><td>379</td><td>$9.38</td></tr>
+      <tr><td>AT (Austria)</td><td>376</td><td>$9.15</td></tr>
+      <tr><td>SG (Singapore)</td><td>334</td><td>$8.87</td></tr>
+      <tr><td>NO (Norway)</td><td>233</td><td>$8.76</td></tr>
+      <tr><td>DE (Germany)</td><td>425</td><td>$8.50</td></tr>
+      <tr><td>DK (Denmark)</td><td>179</td><td>$8.09</td></tr>
+      <tr><td>FI (Finland)</td><td>205</td><td>$7.44</td></tr>
+      <tr><td>SE (Sweden)</td><td>198</td><td>$7.13</td></tr>
+      <tr><td>GB (United Kingdom)</td><td>447</td><td>$6.88</td></tr>
+      <tr><td>AE (United Arab Emirates)</td><td>159</td><td>$6.55</td></tr>
+      <tr><td>CA (Canada)</td><td>286</td><td>$6.24</td></tr>
+      <tr><td>AU (Australia)</td><td>174</td><td>$6.02</td></tr>
+      <tr><td>FR (France)</td><td>261</td><td>$5.88</td></tr>
+      <tr><td>US (United States)</td><td>385</td><td>$5.42</td></tr>
+      <tr><td>NL (Netherlands)</td><td>228</td><td>$5.12</td></tr>
+      <tr><td>BE (Belgium)</td><td>107</td><td>$4.74</td></tr>
+      <tr><td>IT (Italy)</td><td>147</td><td>$4.41</td></tr>
+      <tr><td>ES (Spain)</td><td>133</td><td>$4.12</td></tr>
+      <tr><td>QA (Qatar)</td><td>64</td><td>$3.50</td></tr>
+      <tr><td>KW (Kuwait)</td><td>55</td><td>$3.21</td></tr>
+      <tr><td>BH (Bahrain)</td><td>48</td><td>$2.84</td></tr>
+      <tr><td>OM (Oman)</td><td>39</td><td>$2.56</td></tr>
+      <tr><td>SA (Saudi Arabia)</td><td>92</td><td>$2.11</td></tr>
+    </tbody>
+  </table>
 
-    <h3 id="link-title"></h3>
-    <p id="link-desc"></p>
-    <!-- ضع رابطك الذكي في SMART_LINK داخل السكربت أدناه -->
-    <a id="smart-link" class="smart-link" href="#" target="_blank" rel="noopener noreferrer"></a>
-
-    <div style="margin-top:20px; text-align:center;">
-      <button class="lang-switch" data-lang="en" aria-pressed="false">English</button>
-      <button class="lang-switch" data-lang="ar" aria-pressed="false">العربية</button>
-      <button class="lang-switch" data-lang="es" aria-pressed="false">Español</button>
-    </div>
-  </div>
-
-<script>
-  // === البيانات وإعداد الرابط الذكي ===
-  const SMART_LINK = "https://undefined.exampledomain.com/undefined"; // استبدل "#" بالرابط الذكي الفعلي لديك
-  const earningsData = [
-    {en: 'US', ar: 'الولايات المتحدة', es: 'EE.UU.', revenue: 26.90, clicks: 1200},
-    {en: 'CA', ar: 'كندا', es: 'Canadá', revenue: 22.22, clicks: 850},
-    {en: 'CL', ar: 'تشيلي', es: 'Chile', revenue: 10.61, clicks: 430},
-    {en: 'AU', ar: 'أستراليا', es: 'Australia', revenue: 9.88, clicks: 400},
-    {en: 'IE', ar: 'أيرلندا', es: 'Irlanda', revenue: 9.48, clicks: 320},
-  ];
-
-  const translations = {
-    en: {
-      earningsTitle: "User Earnings per Country",
-      countryCol: "Country",
-      clicksCol: "Clicks",
-      earningsCol: "User Earnings ($)",
-      linkMain: "Smart Link",
-      linkDesc: "Smart Link (Works for All Countries)",
-      clickText: "👉 Click Here 👈"
-    },
-    ar: {
-      earningsTitle: "أرباح المستخدم لكل دولة",
-      countryCol: "الدولة",
-      clicksCol: "مرات النقر",
-      earningsCol: "أرباح المستخدم ($)",
-      linkMain: "الرابط الذكي",
-      linkDesc: "الرابط الذكي (يعمل لكل الدول)",
-      clickText: "👉 اضغط هنا 👈"
-    },
-    es: {
-      earningsTitle: "Ganancias del usuario por país",
-      countryCol: "País",
-      clicksCol: "Clics",
-      earningsCol: "Ganancias ($)",
-      linkMain: "Enlace inteligente",
-      linkDesc: "Enlace inteligente (Funciona para todos los países)",
-      clickText: "👉 Haz clic aquí 👈"
-    }
-  };
-
-  // Formatters (locale-specific)
-  const numberFormats = {
-    en: new Intl.NumberFormat('en-US'),
-    ar: new Intl.NumberFormat('ar-EG'),
-    es: new Intl.NumberFormat('es-ES')
-  };
-  const currencyFormats = {
-    en: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }),
-    ar: new Intl.NumberFormat('ar-EG', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }),
-    es: new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
-  };
-
-  function escapeHtml(text) {
-    return String(text)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  function renderTable(lang='en') {
-    // set language and direction on the <html> element for accessibility
-    document.documentElement.lang = (lang === 'ar') ? 'ar' : (lang === 'es' ? 'es' : 'en');
-    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-    // update headings and link (use textContent to avoid HTML injection)
-    document.getElementById('earnings-title').textContent = translations[lang].earningsTitle;
-    document.getElementById('link-title').textContent = translations[lang].linkMain;
-    document.getElementById('link-desc').textContent = translations[lang].linkDesc;
-    const smartLink = document.getElementById('smart-link');
-    smartLink.textContent = translations[lang].clickText;
-    smartLink.href = SMART_LINK;
-
-    const table = document.getElementById('earnings-table');
-
-    // build header + caption
-    const thead = `
-      <caption>${escapeHtml(translations[lang].earningsTitle)}</caption>
-      <thead>
-        <tr>
-          <th scope="col">${escapeHtml(translations[lang].countryCol)}</th>
-          <th scope="col">${escapeHtml(translations[lang].clicksCol)}</th>
-          <th scope="col">${escapeHtml(translations[lang].earningsCol)}</th>
-        </tr>
-      </thead>
-    `;
-
-    // sort by revenue desc
-    const sorted = earningsData.slice().sort((a,b) => b.revenue - a.revenue);
-
-    const rows = sorted.map(item => {
-      const countryName = (lang === 'ar') ? item.ar : (lang === 'es' ? item.es : item.en);
-      return `<tr>
-                <td>${escapeHtml(countryName)}</td>
-                <td>${numberFormats[lang].format(item.clicks)}</td>
-                <td>${currencyFormats[lang].format(item.revenue)}</td>
-              </tr>`;
-    }).join('');
-
-    table.innerHTML = thead + '<tbody>' + rows + '</tbody>';
-  }
-
-  function setLang(lang) {
-    renderTable(lang);
-    document.querySelectorAll('.lang-switch').forEach(btn => {
-      const btnLang = btn.getAttribute('data-lang');
-      const active = btnLang === lang;
-      btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-  }
-
-  // attach keyboard-friendly listeners (progressive enhancement)
-  document.querySelectorAll('.lang-switch').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
-    btn.addEventListener('keyup', (e) => {
-      // handle Enter or Space (cross-browser)
-      const isSpace = e.key === ' ' || e.key === 'Spacebar' || e.code === 'Space';
-      if (e.key === 'Enter' || isSpace) {
-        e.preventDefault();
-        btn.click();
-      }
-    });
-  });
-
-  // initial render
-  setLang('en');
-
-  // Optional: track clicks on smart link (in-memory only)
-  document.getElementById('smart-link').addEventListener('click', (e) => {
-    // Increase clicks for the country with the highest revenue (more robust than using index 0)
-    let topIndex = 0;
-    for (let i = 1; i < earningsData.length; i++) {
-      if (earningsData[i].revenue > earningsData[topIndex].revenue) topIndex = i;
-    }
-    earningsData[topIndex].clicks = (earningsData[topIndex].clicks || 0) + 1;
-
-    // Re-render in the currently selected language
-    const currentLang = document.documentElement.lang || 'en';
-    renderTable(currentLang);
-
-    // Note: the click will still open the target in a new tab/window because of target="_blank".
-    // If you'd like to prevent navigation and handle it via JS, call e.preventDefault() here.
-    // To persist clicks across sessions, consider storing `earningsData` in localStorage (optional).
-  });
-</script>
+  <h2>Countries Link</h2>
+  <table>
+    <tr>
+      <td><a href="#">Link for all countries</a></td>
+    </tr>
+  </table>
 </body>
 </html>
