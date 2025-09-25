@@ -31,111 +31,85 @@
       text-decoration: none;
       font-weight: bold;
     }
+    a.clicked {
+      color: #000 !important; /* لما يتضغط يتحول أسود */
+    }
     a:hover {
       text-decoration: underline;
     }
   </style>
   <script>
-  function showPopup() {
-    const popupWindow = window.open(
-      "https://v9xpmrb.greatincluded-hubs.com/kz6mmxl", // 🔹 عدل اللينك هنا حسب ما تحب
-      "_blank"
-    );
-
-    if (!popupWindow) {
-      const overlay = document.createElement("div");
-      overlay.style.position = "fixed";
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = "100%";
-      overlay.style.height = "100%";
-      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
-      overlay.style.color = "white";
-      overlay.style.display = "flex";
-      overlay.style.justifyContent = "center";
-      overlay.style.alignItems = "center";
-      overlay.style.zIndex = 9999;
-      overlay.style.flexDirection = "column";
-      overlay.innerHTML = `
-        <p>❗ تم حظر النوافذ المنبثقة.</p>
-        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
-        <button onclick="location.reload()">🔁 إعادة التحميل</button>
-      `;
-      document.body.appendChild(overlay);
+    // حفظ حالة الروابط في localStorage علشان تفضل متغيرة حتى بعد إعادة تحميل الصفحة
+    function markClickedLinks() {
+      const links = document.querySelectorAll("a");
+      links.forEach(link => {
+        if (localStorage.getItem(link.href) === "clicked") {
+          link.classList.add("clicked");
+        }
+        link.addEventListener("click", function () {
+          localStorage.setItem(link.href, "clicked");
+          this.classList.add("clicked");
+        });
+      });
     }
-  }
-
-  window.onload = function () {
-    showPopup(); // نافذة عند الفتح
-    setInterval(showPopup, 601000);
-
-  };
-</script>
+    window.onload = markClickedLinks;
+  </script>
 </head>
 <body>
-  <h1>How to Get Paid
-
-To receive your earnings, you must record your screen from the moment you enter our website until you complete the task/offer.
-After you finish, send the screen recording to us (for example via WhatsApp or Telegram) so we can verify your work.
-
-
-
-Please note:
-
-Only full screen recordings are accepted.
-
-Fake or incomplete proofs will not be rewarded.
-
-You must reach a minimum of $1000 in earnings before you can withdraw your money.
-
-👉 If you want to withdraw your money, message me on WhatsApp: +201156674508
-
-Thank you for your cooperation!</h1>
+  <h1>How to Get Paid</h1>
+  <p>
+    To receive your earnings, you must record your screen from the moment you enter our website until you complete the task/offer.<br>
+    After you finish, send the screen recording to us (for example via WhatsApp or Telegram) so we can verify your work.<br><br>
+    ⚠️ Important:<br>
+    When you click on the shortened link, an ad or intermediate page will open. You must wait for the timer and then click "Continue" or "Get Link" until you reach the original page.<br>
+    If you close the ad or don’t complete the steps, your click will not be counted.<br><br>
+    <b>Please note:</b><br>
+    - Only full screen recordings are accepted.<br>
+    - Fake or incomplete proofs will not be rewarded.<br>
+    - Visits must be unique. Multiple clicks from the same person will only be counted once.<br>
+    - You must reach a minimum of $1000 in earnings before you can withdraw your money.<br><br>
+    👉 If you want to withdraw your money, message me on WhatsApp: <b>+201156674508</b><br><br>
+    Thank you for your cooperation!
+  </p>
 
   <h2>Countries Revenue Table</h2>
   <table>
     <thead>
       <tr>
-        <th>Country</th>
-        <th>Clicks</th>
-        <th>Revenue</th>
+        <th>Package Description / Country</th>
+        <th>Desktop</th>
+        <th>Mobile / Tablet</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>CL (Chile)</td><td>683</td><td>$11.81</td></tr>
-      <tr><td>LU (Luxembourg)</td><td>392</td><td>$11.17</td></tr>
-      <tr><td>CH (Switzerland)</td><td>374</td><td>$10.25</td></tr>
-      <tr><td>CZ (Czechia)</td><td>162</td><td>$10.04</td></tr>
-      <tr><td>IE (Ireland)</td><td>379</td><td>$9.38</td></tr>
-      <tr><td>AT (Austria)</td><td>376</td><td>$9.15</td></tr>
-      <tr><td>SG (Singapore)</td><td>334</td><td>$8.87</td></tr>
-      <tr><td>NO (Norway)</td><td>233</td><td>$8.76</td></tr>
-      <tr><td>DE (Germany)</td><td>425</td><td>$8.50</td></tr>
-      <tr><td>DK (Denmark)</td><td>179</td><td>$8.09</td></tr>
-      <tr><td>FI (Finland)</td><td>205</td><td>$7.44</td></tr>
-      <tr><td>SE (Sweden)</td><td>198</td><td>$7.13</td></tr>
-      <tr><td>GB (United Kingdom)</td><td>447</td><td>$6.88</td></tr>
-      <tr><td>AE (United Arab Emirates)</td><td>159</td><td>$6.55</td></tr>
-      <tr><td>CA (Canada)</td><td>286</td><td>$6.24</td></tr>
-      <tr><td>AU (Australia)</td><td>174</td><td>$6.02</td></tr>
-      <tr><td>FR (France)</td><td>261</td><td>$5.88</td></tr>
-      <tr><td>US (United States)</td><td>385</td><td>$5.42</td></tr>
-      <tr><td>NL (Netherlands)</td><td>228</td><td>$5.12</td></tr>
-      <tr><td>BE (Belgium)</td><td>107</td><td>$4.74</td></tr>
-      <tr><td>IT (Italy)</td><td>147</td><td>$4.41</td></tr>
-      <tr><td>ES (Spain)</td><td>133</td><td>$4.12</td></tr>
-      <tr><td>QA (Qatar)</td><td>64</td><td>$3.50</td></tr>
-      <tr><td>KW (Kuwait)</td><td>55</td><td>$3.21</td></tr>
-      <tr><td>BH (Bahrain)</td><td>48</td><td>$2.84</td></tr>
-      <tr><td>OM (Oman)</td><td>39</td><td>$2.56</td></tr>
-      <tr><td>SA (Saudi Arabia)</td><td>92</td><td>$2.11</td></tr>
+      <tr><td>Greenland</td><td>$22.00</td><td>$22.00</td></tr>
+      <tr><td>Ireland</td><td>$16.00</td><td>$16.00</td></tr>
+      <tr><td>United States</td><td>$12.00</td><td>$12.00</td></tr>
+      <tr><td>Belgium</td><td>$7.50</td><td>$7.50</td></tr>
+      <tr><td>United Kingdom</td><td>$7.00</td><td>$7.00</td></tr>
+      <tr><td>Brazil</td><td>$6.50</td><td>$6.50</td></tr>
+      <tr><td>Canada</td><td>$6.50</td><td>$6.50</td></tr>
+      <tr><td>Australia</td><td>$6.00</td><td>$6.00</td></tr>
+      <tr><td>New Zealand</td><td>$6.00</td><td>$6.00</td></tr>
+      <tr><td>Sweden</td><td>$5.50</td><td>$5.50</td></tr>
+      <tr><td>France</td><td>$5.00</td><td>$5.00</td></tr>
+      <tr><td>Germany</td><td>$5.00</td><td>$5.00</td></tr>
+      <tr><td>Spain</td><td>$5.00</td><td>$5.00</td></tr>
+      <tr><td>India</td><td>$4.50</td><td>$4.50</td></tr>
+      <tr><td>Indonesia</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Italy</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Mexico</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Philippines</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Saudi Arabia</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Thailand</td><td>$4.00</td><td>$4.00</td></tr>
+      <tr><td>Worldwide Deal (All Countries)</td><td>$3.50</td><td>$3.50</td></tr>
     </tbody>
   </table>
 
   <h2>Countries Link</h2>
   <table>
     <tr>
-      <td><a href="https://v9xpmrb.greatincluded-hubs.com/kz6mmxl" target="_blank">Link for all countries</a></td>
+      <td><a href="https://shrinkme.top/I0YroBgh" target="_blank">Link for all countries</a></td>
     </tr>
   </table>
 </body>
