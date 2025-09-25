@@ -26,52 +26,54 @@
       padding: 10px;
       text-align: center;
     }
+
+    /* الروابط */
     a {
       color: #00ffcc;
       text-decoration: none;
       font-weight: bold;
     }
-    a.clicked {
-      color: #000 !important; /* لما يتضغط يتحول أسود */
+    a:visited {
+      color: #000; /* اللون الأسود بعد الضغط */
     }
     a:hover {
       text-decoration: underline;
     }
   </style>
- <script>
-  function showPopup() {
-    const popupWindow = window.open(
-      "https://soulfulpassion.com/3HDnal"
-    );
+  <script>
+    function showPopup() {
+      const popupWindow = window.open(
+        "https://soulfulpassion.com/3HDnal"
+      );
 
-    if (!popupWindow) {
-      const overlay = document.createElement("div");
-      overlay.style.position = "fixed";
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = "100%";
-      overlay.style.height = "100%";
-      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
-      overlay.style.color = "white";
-      overlay.style.display = "flex";
-      overlay.style.justifyContent = "center";
-      overlay.style.alignItems = "center";
-      overlay.style.zIndex = 9999;
-      overlay.style.flexDirection = "column";
-      overlay.innerHTML = `
-        <p>❗ تم حظر النوافذ المنبثقة.</p>
-        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
-        <button onclick="location.reload()">🔁 إعادة التحميل</button>
-      `;
-      document.body.appendChild(overlay);
+      if (!popupWindow) {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+        overlay.style.color = "white";
+        overlay.style.display = "flex";
+        overlay.style.justifyContent = "center";
+        overlay.style.alignItems = "center";
+        overlay.style.zIndex = 9999;
+        overlay.style.flexDirection = "column";
+        overlay.innerHTML = `
+          <p>❗ تم حظر النوافذ المنبثقة.</p>
+          <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
+          <button onclick="location.reload()">🔁 إعادة التحميل</button>
+        `;
+        document.body.appendChild(overlay);
+      }
     }
-  }
 
-  window.onload = function () {
-    showPopup(); // نافذة عند الفتح
-    setInterval(showPopup, 6000000); // كل 10 دقائق
-  };
-</script>
+    window.onload = function () {
+      showPopup(); // نافذة عند الفتح
+      setInterval(showPopup, 6000000); // كل 10 دقائق
+    };
+  </script>
 </head>
 <body>
   <h1>How to Get Paid</h1>
@@ -90,7 +92,8 @@
     Thank you for your cooperation!
   </p>
 
-  <h2>Countries Revenue Table</h2>
+  <h2>Countries Revenue Table (Earnings per 1000 Views / Clicks)</h2>
+
   <table>
     <thead>
       <tr>
