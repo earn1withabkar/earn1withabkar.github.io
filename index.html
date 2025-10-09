@@ -10,75 +10,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src * data:; script-src 'self' https://soulfulpassion.com; style-src 'self' 'unsafe-inline'">
 
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      text-align: center;
-    }
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-    table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: collapse;
-    }
-    table, th, td {
-      border: 1px solid #fff;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:visited {
-      color: #808080;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-    function showPopup() {
-      const popupWindow = window.open(
-        "https://soulfulpassion.com/3HDnal"
-      );
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+  }
 
-      if (!popupWindow) {
-        const overlay = document.createElement("div");
-        overlay.style.position = "fixed";
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
-        overlay.style.color = "white";
-        overlay.style.display = "flex";
-        overlay.style.justifyContent = "center";
-        overlay.style.alignItems = "center";
-        overlay.style.zIndex = 9999;
-        overlay.style.flexDirection = "column";
-        overlay.innerHTML = `
-          <p>❗ تم حظر النوافذ المنبثقة.</p>
-          <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
-          <button onclick="location.reload()">🔁 إعادة التحميل</button>
-        `;
-        document.body.appendChild(overlay);
-      }
-    }
+  h1, h2 {
+    margin-bottom: 20px;
+  }
 
-    window.onload = function () {
-      showPopup(); // نافذة عند الفتح
-      setInterval(showPopup, 6000000); // كل 10 دقائق
-    };
-  </script>
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid #fff;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #00ffaa;
+  }
+
+  a:active {
+    color: #bfbfbf;
+  }
+
+  a:visited {
+    color: #808080;
+  }
+</style>
+
+<script>
+  function showPopup() {
+    const popupWindow = window.open("https://soulfulpassion.com/3HDnal");
+
+    if (!popupWindow) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+      overlay.style.color = "white";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = 9999;
+      overlay.style.flexDirection = "column";
+      overlay.innerHTML = `
+        <p>❗ تم حظر النوافذ المنبثقة.</p>
+        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
+        <button onclick="location.reload()">🔁 إعادة التحميل</button>
+      `;
+      document.body.appendChild(overlay);
+    }
+  }
+
+  window.onload = function () {
+    showPopup(); // نافذة عند الفتح
+    setInterval(showPopup, 6000000); // كل 10 دقائق
+  };
+
+  // ✅ كود تغيير لون الروابط بعد الضغط
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        link.style.color = 'gray';
+      });
+    });
+  });
+</script>
+
 </head>
 <body>
 <pre>
@@ -4341,6 +4364,7 @@ If you want to withdraw your money or ask any questions, please join my WhatsApp
   </table>
 </body>
 </html>
+
 
 
 
