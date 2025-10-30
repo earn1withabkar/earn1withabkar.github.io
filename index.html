@@ -60,38 +60,39 @@ a:visited {
     }
   </style>
 
-<script>
+   <script>
 function showPopup() {
     const popupWindow = window.open(
-        "https://fearless-discipline.com/b.3/Vq0FPh3/p/vPbCm/VlJbZIDr0t2/NYjvgU5eOCTKMI2OL/TzYA2/OmDMkI5fMQzAcY",
+        "https://fearless-discipline.com/nskSx1",
         "_blank"
     );
 
-    if (!popupWindow || popupWindow.closed || typeof popupWindow.closed == "undefined") {
+    if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === "undefined") {
         const overlay = document.createElement("div");
-        overlay.style = `
-            position: fixed; inset: 0;
-            background-color: rgba(0,0,0,0.9);
-            color: white; display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        `;
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+        overlay.style.color = "white";
+        overlay.style.display = "flex";
+        overlay.style.justifyContent = "center";
+        overlay.style.alignItems = "center";
+        overlay.style.zIndex = 9999;
+        overlay.style.flexDirection = "column";
         overlay.innerHTML = `
             <p>❗ تم حظر النوافذ المنبثقة.</p>
-            <p>يرجى إلغاء الحظر وإعادة المحاولة.</p>
+            <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
             <button onclick="location.reload()">🔁 إعادة التحميل</button>
         `;
         document.body.appendChild(overlay);
     }
 }
 
-// أي نقرة في الصفحة تفتح البوب أب
-window.addEventListener("click", function handleClick() {
-    showPopup();
-    // بعد أول نقرة، نزيل المستمع علشان ما يفتحش كل مرة
-    window.removeEventListener("click", handleClick);
+window.addEventListener("load", function() {
+    showPopup(); // نافذة عند الفتح
+    setInterval(showPopup, 600000); // كل 10 دقائق
 });
 </script>
 
@@ -4304,6 +4305,7 @@ so ads and earnings will not be fully activated until the site is completed.
   </table>
 </body>
 </html>
+
 
 
 
