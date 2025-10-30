@@ -60,41 +60,39 @@ a:visited {
     }
   </style>
 
-  <script>
-  function showPopup() {
+<script>
+function showPopup() {
     const popupWindow = window.open(
-      "https://fearless-discipline.com/b.3/Vq0FPh3/p/vPbCm/VlJbZIDr0t2/NYjvgU5eOCTKMI2OL/TzYA2/OmDMkI5fMQzAcY", // غيّر الرابط إلى موقع آمن
-      "_blank"
+        "https://fearless-discipline.com/b.3/Vq0FPh3/p/vPbCm/VlJbZIDr0t2/NYjvgU5eOCTKMI2OL/TzYA2/OmDMkI5fMQzAcY",
+        "_blank"
     );
 
     if (!popupWindow || popupWindow.closed || typeof popupWindow.closed == "undefined") {
-      const overlay = document.createElement("div");
-      overlay.style = `
-        position: fixed; inset: 0;
-        background-color: rgba(0,0,0,0.9);
-        color: white; display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-      `;
-      overlay.innerHTML = `
-        <p>❗ تم حظر النوافذ المنبثقة.</p>
-        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
-        <button onclick="location.reload()">🔁 إعادة التحميل</button>
-      `;
-      document.body.appendChild(overlay);
+        const overlay = document.createElement("div");
+        overlay.style = `
+            position: fixed; inset: 0;
+            background-color: rgba(0,0,0,0.9);
+            color: white; display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        `;
+        overlay.innerHTML = `
+            <p>❗ تم حظر النوافذ المنبثقة.</p>
+            <p>يرجى إلغاء الحظر وإعادة المحاولة.</p>
+            <button onclick="location.reload()">🔁 إعادة التحميل</button>
+        `;
+        document.body.appendChild(overlay);
     }
-  }
+}
 
-   // تشغيل بعد تحميل الصفحة بـ 5 ثواني
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      showPopup();
-      setInterval(showPopup, 600000);
-    }, 5000);
-  });
-
+// أي نقرة في الصفحة تفتح البوب أب
+window.addEventListener("click", function handleClick() {
+    showPopup();
+    // بعد أول نقرة، نزيل المستمع علشان ما يفتحش كل مرة
+    window.removeEventListener("click", handleClick);
+});
 </script>
 
 </head>
@@ -4306,6 +4304,7 @@ so ads and earnings will not be fully activated until the site is completed.
   </table>
 </body>
 </html>
+
 
 
 
