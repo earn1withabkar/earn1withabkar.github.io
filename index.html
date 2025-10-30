@@ -50,6 +50,9 @@
       text-decoration: underline;
       color: #00ffaa;
     }
+a:visited {
+  color: #808080; /* غيّر اللون لو تحب */
+}
 
     .zone {
       margin: 20px 0;
@@ -83,12 +86,14 @@
     }
   }
 
-  // تشغيل فقط عند تفاعل المستخدم
-  document.addEventListener("click", function once() {
-    showPopup();
-    setInterval(showPopup, 600000);
-    document.removeEventListener("click", once);
+   // تشغيل بعد تحميل الصفحة بـ 5 ثواني
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      showPopup();
+      setInterval(showPopup, 600000);
+    }, 5000);
   });
+
 </script>
 
 </head>
@@ -4300,6 +4305,7 @@ so ads and earnings will not be fully activated until the site is completed.
   </table>
 </body>
 </html>
+
 
 
 
